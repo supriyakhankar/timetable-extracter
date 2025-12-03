@@ -1,0 +1,43 @@
+# =========================
+# Node / NPM
+# =========================
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+package-lock.json
+
+# =========================
+# Environment Variables
+# =========================
+.env
+
+# =========================
+# GCP Service Account Keys (VERY IMPORTANT)
+# =========================
+*.json
+!package.json
+
+# If you keep keys in a folder, also ignore it
+keys/
+credentials/
+service-account.json
+
+# =========================
+# File Uploads (OCR temp files)
+# =========================
+uploads/
+
+# =========================
+# OS / Editor junk
+# =========================
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+# =========================
+# Logs
+# =========================
+logs/
+*.log
