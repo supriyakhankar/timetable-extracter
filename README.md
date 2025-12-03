@@ -87,7 +87,51 @@ Server running on port 4000
 Use Postman or Curl:
 
 ```http
-POST http://localhost:4000/api/upload
+GET http://localhost:4000/
 ```
 
 The API is now ready to accept timetable files and return structured JSON.
+
+
+---
+
+## 1.6.1 Upload Timetable File
+
+Uploads a timetable file, runs Google Cloud Vision OCR on it, then uses Vertex AI (Gemini) to extract structured timetable blocks from the OCR text.
+
+### POST /api/upload-timetable
+
+Method: POST  
+URL: /api/upload-timetable  
+Content-Type: multipart/form-data  
+
+---
+
+### Request (form-data)
+
+| Field | Type | Required | Description |
+|-------|------|----------|-------------|
+| file  | File | Yes      | Timetable PDF / Image / DOCX |
+
+Supported File Types:
+
+- PDF
+- DOCX
+- PNG
+- JPG / JPEG
+
+---
+
+### Example using curl
+
+```bash
+curl -X POST http://localhost:4000/api/upload-timetable \
+  -F "file=@Teacher_Timetable_Example_2.pdf"
+
+----
+
+### 
+
+
+
+
